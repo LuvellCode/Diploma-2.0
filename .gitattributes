@@ -1,0 +1,7 @@
+input/sentiment140 filter=lfs diff=lfs merge=lfs -text
+input/RawTwitterFeeds filter=lfs diff=lfs merge=lfs -text
+input/RawTwitterFeeds.zip filter=lfs diff=lfs merge=lfs -text
+input/Sentiment140.zip filter=lfs diff=lfs merge=lfs -text
+input/desktop.ini filter=lfs diff=lfs merge=lfs -text
+input/russian-troll-tweets filter=lfs diff=lfs merge=lfs -text
+input/russian-troll-tweets.zip filter=lfs diff=lfs merge=lfs -text
