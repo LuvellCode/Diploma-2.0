@@ -1,5 +1,5 @@
 from django.apps import AppConfig
-
+from django.conf import settings
 import joblib
 import logging
 
@@ -7,7 +7,7 @@ import logging
 class TrollRecognitionConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'troll_recognition'
-    _model_name = 'E:\Study_Local\Магістерська.локал\model_test.pkl'
+    _model_name = settings.MODEL_PATH
     model = None  # глобальна змінна для збереження моделі
 
     def ready(self):

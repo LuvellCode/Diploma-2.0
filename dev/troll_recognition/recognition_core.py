@@ -112,6 +112,10 @@ def cleaning_and_counts(s):
 def predict_is_troll(model, data):
     df = pd.DataFrame(data)
     df = df[['account', 'tweet']]
+
+    if df.shape[0] < 10:
+        return None
+
     #df.info()
 
     # Cleaning

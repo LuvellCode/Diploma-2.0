@@ -34,6 +34,9 @@ class TrollPredictionView(APIView):
                         "confidence": 0.87
                     }
                 }
+            ),
+            400: openapi.Response(
+                description="Bad Request. Less than 10 tweets specified."
             )
         }
     )
@@ -47,11 +50,14 @@ class TrollPredictionView(APIView):
         start_time = time.time()
         result = predict_is_troll(TrollRecognitionConfig.model, input_data)
         execution_time = round(time.time() - start_time, 4)
+        
+        response_object = {"is_troll": None, "confidence": None, "elapsed_time": None}
 
-        response_object = {"is_troll": result[0], "confidence": result[1], "elapsed_time": execution_time}
+        if result is not None:
+            response_object["is_troll"], response_object['confidence'], response_object["elapsed_time"] = result
 
         #print("RESPONSE")
         #print(response_object)
 
-        return Response(response_object, status=status.HTTP_200_OK)
+        return Response(response_object, status=status.HTTP_200_OK if result is not None else status.HTTP_400_BAD_REQUEST)
     
