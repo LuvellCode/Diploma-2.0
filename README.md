@@ -1,5 +1,5 @@
 
-# Diploma ("Detection of Trolling in Social Media Using Natural Language Processing")
+# Diploma (*"Виявлення тролінгу в соціальних мережах з використанням нейролінгвістичного програмування"*)
 [![Django CI](https://github.com/LuvellCode/Diploma-2.0/actions/workflows/django.yml/badge.svg)](https://github.com/LuvellCode/Diploma-2.0/actions/workflows/django.yml)
 
 ## Project Structure
