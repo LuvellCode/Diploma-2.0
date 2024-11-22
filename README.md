@@ -218,6 +218,9 @@ The first thing you will see is the main Swagger API page:
 
 ### API Response
 
+As a result, you should see the API response:
+![image](https://github.com/user-attachments/assets/2d89b47a-02f3-4c38-b01f-262cfbedadf4)
+
 The API response will always have the following schema:
 ```json
 {
