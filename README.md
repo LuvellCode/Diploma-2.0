@@ -36,7 +36,7 @@ To ensure smooth operation, your environment should meet the following requireme
 
 ### 📂 Comparison
 
-This folder containsresources to compare the performance of three models:
+This folder contains resources to compare the performance of three models:
 - CatBoost (`!pip install catboost`)
 - XGBoost (`!pip install xgboost`)
 - LightGBM (`!pip install lightgbm`)
